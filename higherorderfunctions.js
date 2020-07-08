@@ -6,42 +6,46 @@
     // returns a new array based on if each value is true or false
         // Syntax:
             // Simple: 
-            //     arr.filter(element => element.length !== 4);
-            // // Single line WITH return
-            //     arr.filter(element => { return element.length !== 4});
-            // // Multiple line
-            //     arr.filter(element => { 
-            //         return element.length !== 4
-            //     });
+                arr.filter(element => element.length !== 4);
+            // Single line WITH return
+                arr.filter(element => { return element.length !== 4});
+            // Multiple line
+                arr.filter(element => { 
+                    return element.length !== 4
+                });
 
 
         // example: remove all words that are 4 characters from an array or words
 
-        // let words = ['thing', 'item', 'person', 'sun', 'gasp'];
+        let words = ['thing', 'item', 'person', 'sun', 'gasp'];
 
-        // let newArr = words.filter(word =>  word.length !== 4);
+        let newArr = words.filter(word =>  word.length !== 4);
 
-        // console.log(newArr);
+        console.log(newArr);
 
-        // let newArr = words.filter(word => {
-        //     return word.length !== 4
-        // });
+        let newArr = words.filter(word => {
+            return word.length !== 4
+        });
 
-        // console.log(newArr);
+        console.log(newArr);
 
-        // console.log(words);
+        console.log(words);
 
         // examples:
             // given an array filter it to return all words that are 4 characters
             let arr = ['tree', 'no', 'past', 'hungry'];
             let only4Letters = arr.filter( ele => ele.length === 4);
-            // console.log(only4Letters);
+            console.log(only4Letters);
+
         // given an array filter it to return only the objects or arrays
+           
             let arr1 = [true, false, undefined, null, [1, 2, 3, 4], {name: 'car', wheels:'4'}];
             let newArr = arr1.filter(ele => typeof ele === 'object');
-            // console.log(newArr);
+            console.log(newArr);
+
         // given an array filter it to return words that only contain one of the following letters a, e, i, o, or u
-            let arr2 = ['hey', 'how', 'are', 'you', 'a', 'by', 1, undefined, null, true]; 
+            
+        let arr2 = ['hey', 'how', 'are', 'you', 'a', 'by', 1, undefined, null, true]; 
             let newArr2 = arr2.filter(ele => 
                 (typeof ele !== 'number' &&
                 typeof ele !== 'object' && 
@@ -54,7 +58,7 @@
                 ele.indexOf('u') > -1)
             );
 
-            // console.log(newArr2);
+            console.log(newArr2);
 
         // Given the array on the following line. 
         // Filter all guests for only the ones over 21. 
@@ -67,7 +71,7 @@
         ];
 
         let over21 = guests.filter(ele => ele.age >= 21);
-        // console.log(over21);  
+        console.log(over21);  
 
 // Reduce
 // returns a single value
@@ -115,13 +119,13 @@
         let totalPop = Object.values(oneObj).reduce((acc, val) => acc + val);
 
     // Given the following list of objects reduce all populations to one.
-        // let countries = [
-        //     {name: 'USA', pop: 300000000},
-        //     {name: 'UK', pop: 66000000},
-        //     {name: 'India',pop: 1300000000},
-        // ]
-        // let totalPop = countries.reduce((total, ele) => total + ele.pop, 0);
-        // console.log(totalPop);
+        let countries = [
+            {name: 'USA', pop: 300000000},
+            {name: 'UK', pop: 66000000},
+            {name: 'India',pop: 1300000000},
+        ]
+        let totalPop = countries.reduce((total, ele) => total + ele.pop, 0);
+        console.log(totalPop);
 
 // Sort
 // returns the original array but sorted 
@@ -134,13 +138,13 @@
     // sort an array of numbers by first digit, then second, etc...
         let arrOfNums = [0, 99, 1, 34, -144, -51, -13, 0, 1, 4,12312, 51212, -1424211];
         let sortedNums = () => arrOfNums.sort();
-        // console.time('sortedNums');
-        // console.log(sortedNums(arrOfNums));
-        // console.timeEnd('sortedNums');
+        console.time('sortedNums');
+        console.log(sortedNums(arrOfNums));
+        console.timeEnd('sortedNums');
 
     // sort an array of numbers by ACTUAL size (this is what we generally expect as humans)
         let arrOfNums2 = [0, 99, 123, 51, 2, 3, -1, 01, 3, -3, -3000, -1000];
-        // console.log(arrOfNums2.sort((a, b) => a - b)); // (Potentially super inefficient)
+        console.log(arrOfNums2.sort((a, b) => a - b)); // (Potentially super inefficient)
 
     // sort an array of objects (based on numeric Key-Value pairs)
         let arrOfObjs = [
@@ -150,7 +154,7 @@
             {name: 'Sharice', age: 20},
         ];
 
-        // console.log(arrOfObjs.sort((person1, person2) => person1.age - person2.age))
+        console.log(arrOfObjs.sort((person1, person2) => person1.age - person2.age))
         
     // sort an array of objects (based on non-numeric Key-Value pairs)
         // very complex, look-up if needed
@@ -186,23 +190,18 @@
     // More complex syntatically
         // add one to every other element
 
-      
-
-        // let numbers = [-1, 4, 7, 0, -3, 6];
-        // let newNumbers = numbers.map((num, index) => {
-        //     if(index % 2){
-        //         return num + 1
-        //     } else {
-        //         return num + 0;
-        //     }    
-        // })
+        let numbers = [-1, 4, 7, 0, -3, 6];
+        let newNumbers = numbers.map((num, index) => {
+            if(index % 2){
+                return num + 1
+            } else {
+                return num + 0;
+            }    
+        })
         
-        // console.log(newNumbers);
-    
+        console.log(newNumbers);
 
-
-
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
         let num = [1,2,3,4,5,6]
 
